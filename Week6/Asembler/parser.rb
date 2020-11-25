@@ -71,34 +71,40 @@ class Parser
 	def parser(symboltable, address)
 		@code_generator = []
 		check_label(symboltable)
-		@lines.each do |line|
+		@lines.each{|line|
 			@current = line
-			if current.start_with?("@")
-				current.delete_prefix! "@"
-				if current.match?(/\D/)
-					if symboltable.!contain?(@current)
-						symboltable.add_new(line, address)
-						address+=1
-						@code_generator.push('0%015b' % current)
+
+			unless current.empty?
+				if current.start_with?("@")
+					current.slice! "@"
+					memory = current
+
+					if !(current.to_s =~ /\D/)
+						memory = current
+					else
+						if symboltable.symboltable[current.strip].nil?
+							symboltable.add_new(current.strip, address)
+							address+=1
+						end
+						memory = symboltable.symboltable[current.strip]
 					end
+					code_generator.push('0%015b' % memory)
+					
+				elsif current.start_with?("(")
+					next
 				else
-					@code_generator.push('0%015b' % current)
+					code_generator.push('111'+COMP[comp]+DEST[dest]+JUMP[jump])
 				end
-			elsif current.start_with?("(")
-				next
-			else
-				# C-INSTRUCTION
-				@code_generator.push('111'+COMP[comp]+DEST[dest]+JUMP[jump])
 			end
-		end 
-		@code_generator    
+		}
+		code_generator
 	end
 	
 	def check_label(symboltable)
 		address = 0
 		@lines.each do |line|
 			if line.start_with?("(")
-				symboltable.add_new(current.slice(1...-1), address)
+				symboltable.add_new(line.gsub(/[()]/, ""), address)
 			else
 				address+=1
 			end

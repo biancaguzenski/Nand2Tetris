@@ -35,13 +35,13 @@ class Asembler
         parser = Parser.new(code_lines)
         address = 16;
         parser.parser(symboltable, address)
-
         # generate file .hack
-        file = File.basename(file.split('/').last, '.asm')
-        file = File.open("#{file}.hack", "w") {|f| f.write(parser.code_generator) }
+        filename = File.basename(file.split('/').last, '.asm')
+	    file =File.open(filename+".hack", 'w')
+	    file.puts(parser.code_generator)
     end
 end
 
 
 as = Asembler.new
-as.asembler('test.asm')
+as.asembler('Rect.asm')
