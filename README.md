@@ -3,7 +3,7 @@ Nand to tetris - Coursera - The Hebrew University of Jerusalem
 Professors Shimon Schocken and Noam Nisan
 --------
 
-**This repo contain my solutions for the assignments and projects of this course.**
+**This repo contain my solutions for the assignments and projects of this course. I'm currently at week 7.**
 
 ### ABOUT/SOBRE
 
