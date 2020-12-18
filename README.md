@@ -3,7 +3,7 @@ Nand to tetris - Coursera - The Hebrew University of Jerusalem
 Professors Shimon Schocken and Noam Nisan
 --------
 
-**This repo contain my solutions for the assignments and projects of this course. I'm currently at week 7.**
+**This repo contain my solutions for the assignments and projects of this course. I'm currently on week 8.**
 
 ### ABOUT/SOBRE
 
@@ -20,17 +20,35 @@ O curso tem o objetivo de construir um computador completo, desde as portas lóg
 
 ### **Assignments**
 
-Week 1 and 2
-- Boolean algebra, Boolean functions, Logic gates, Hardware Description Language (HDL). Build, simulate, and test: 15 elementary logic gates, family of adders -- chips designed to add numbers and Arithmetic Logic Unit.
+Week 1 and 2  
+- *Key concepts*: Boolean algebra, Boolean functions, gate logic, elementary logic gates, Hardware Description Language (HDL), hardware simulation, binary numbers, binary addition, the two's complement method, half-adders, full-adders, n-bit adders, counters, Arithmetic Logic Unit (ALU), combinational logic. 
 
-Week 3
-- Build, simulate and test a RAM unit gradually: bit, registers, program counter since dff gates.
+Week 3  
+- *Key concepts* : combinational vs sequential logic, clocks and cycles, flip-flops, registers, RAM units, counters.
 
-Week 4
-- Write, test and simulate two programs in assembly language.
+Week 4  
+- *Key concepts*: op codes, mnemonics, binary machine language, symbolic machine language, assembly, low-level arithmetic, logical, addressing, branching, and I/O commands, CPU emulation, low-level programming.
 
-Week 5
-- Puting everything together: build hack hardware platform.
+Week 5  
+- *Key concepts*: Von Neumann and Harvard architectures, the stored program concept, fetch-execute cycle, data bus, instruction bus, CPU, computer design.
 
-Week 6
-- Write the assembler for hack computer. You can build the assembler in any high level language. I've chosen Ruby.
+Week 6  
+- *Key concepts*: Binary and symbolic machine languages, parsing, symbol tables, code generation, cross assembler, assembler implementation.
+ 
+Week 7  
+- *Key concepts*: two-tier compilation (overview), virtualization, virtual machines, VM abstraction, stack processing, pointers, VM implementation, VM translators.
+
+Week 8  
+- *Key concepts*: branching, functions, function call-and-return, dynamic memory management, stack processing, pointers, standard mapping, VM implementation.
+
+Week 9  
+- *Key concepts*: procedural programming, object-based programming, classes, methods, functions, constructors, list processing, recursion, developing interactive applications, graphics optimization. 
+
+Week 10  
+- *Key concepts*: tokenizing, grammars, parsing, parse trees, XML / mark-up, compilation.
+
+Week 11  
+- *Key concepts*:  compiling procedural code, compiling the construction and manipulation of arrays and objects, code generation techniques, recursive compilation engine, symbol tables, memory management.
+
+Week 12  
+- *Key concepts*: running-time analysis, resource allocation, heap management, input handling, vector graphics, fonts, textual outputs, type conversions, string processing, booting, OS implementation issues.
